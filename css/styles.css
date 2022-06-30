@@ -99,11 +99,11 @@ contenedor6{
 	display: flex;		
 	align-items: center;	
 }
-.item1 .menu .menuinner{
+.menuinner{
 	display: none;
 	
 }
-.menu .menuinner img{
+.menuinner img{
 	width: 20px;
 }
 .item1{
@@ -549,7 +549,8 @@ margin-right: 15px;
 	width: 300px;
 }
 
-/*@media only screen and (max-width: 600px) {*/
+
+.menumobil{display: none;}
 
 @media screen and (max-width: 600px) {
 	/*.padre {
@@ -581,19 +582,16 @@ margin-right: 15px;
  		display: flex;
  		justify-content: space-between;
  	}
- 	.item1 .menu .menuinner{
-	display: block;
-	}
- 	.item1 .menu .links, .fonts2 .menu3{
- 		display: none;
- 	}
+	.option {
+  		display: none;
+  	}
+ 	
+
  	.degra{
  		background-image: url(../img/degradado2.png);
  		background-position: top left;
  	}
-	.menu2{
-  	display: none;
-  	}
+
   	.item3{
   		padding: 20px 20px 0;	
   		margin: 0px;  		
@@ -713,5 +711,65 @@ margin-right: 15px;
 	.frame1,.frame3{
 		display: none;
 	}
+	.menuinner{
+		display: block;
+	}
+
+
+	.item1 .menu .links, .fonts2 .menu3{
+ 		display: none;
+ 	}
+  	.item3{
+ 		z-index: 1;
+ 	}
+ 	.item3 p {
+ 		font-size: 14px;
+		line-height: 22px
+ 	}
+ 	.item3 h1{
+ 		font-size: 36px;
+		line-height: 40px;
+ 	}
+	.degra{
+		position: relative;
+   	}
+ 	.menumobil{
+ 		background: linear-gradient(180deg, rgba(0, 0, 0, 0.99) 0%, rgba(43, 48, 135, 0.99) 100%);
+  		color: white;
+ 		text-align: center;
+ 		position:absolute;
+ 		min-width: 100%;
+ 		opacity: 0.9;
+ 		z-index: 2;
+		 right:0;
+ 		top: 65px;
+ 		font-family: 'Shippori Antique B1', sans-serif;
+ 		font-weight: 400;
+ 		font-style: normal;
+	}
+ 	.menumobil ul{
+ 		padding: 8%; 	
+ 		padding-bottom: 132px;
+ 		padding-top: 50px;
+ 	}
+ 	.menumobil li{ /*agrega una linea por cada texto que aya*/
+ 		border-bottom:1px solid #F9F9F9;
+ 		list-style: none;
+		font-size: 46.4px;
+		line-height: 70px;
+		margin-bottom: 10px;
+
+		
+	}
+
+	.padre .menuinner:hover ~.menumobil{
+		display: block;
+	}
+	.menumobil{ 
+	display: none;
+	}
+
+	
+
 
 }
